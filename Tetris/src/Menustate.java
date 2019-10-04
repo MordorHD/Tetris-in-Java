@@ -40,6 +40,7 @@ public class Menustate implements State {
 			Level.currlevel = Level.startlevel;
 			GamePanel.level_delay = Level.values()[Level.currlevel].getSpeed();
 			GameStateManager.setState(GameStateManager.PLAYSTATE);
+			System.out.println(GamePanel.level_delay);
 		}
 		currbutton = e.getKeyCode() == KeyEvent.VK_DOWN && currbutton < 5 ? currbutton + 5
 				: e.getKeyCode() == KeyEvent.VK_UP && currbutton >= 5 ? currbutton - 5

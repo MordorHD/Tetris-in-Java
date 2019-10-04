@@ -42,7 +42,6 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
 
 		new GameStateManager();
 		t = new Timer(1000 / 60, this);
-		t.restart();
 		new Tetronomino();
 
 	}
@@ -93,7 +92,6 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
-		if(frameCount%60 == 0) System.out.println(frameCount);
 		GameStateManager.update();
 		frameCount++;
 		repaint();
